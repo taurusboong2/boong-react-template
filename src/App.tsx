@@ -2,7 +2,8 @@ import React, { FC, Suspense } from 'react';
 import { hot } from 'react-hot-loader/root';
 import { Route, Routes, BrowserRouter } from 'react-router-dom';
 
-import HeaderMenu from './components/molecules/HeaderMenu';
+import GlobalStyle from '@/styles/globalStyles';
+import HeaderMenu from '@/components/molecules/HeaderMenu';
 import Home from '@/pages/home';
 import ReduxTest from '@/pages/reduxTest';
 import Reservations from '@/pages/reservations';
@@ -13,6 +14,8 @@ const App: FC = () => {
     <>
       <>
         <BrowserRouter>
+          <GlobalStyle />
+
           <HeaderMenu />
 
           <Suspense fallback={<></>}>
